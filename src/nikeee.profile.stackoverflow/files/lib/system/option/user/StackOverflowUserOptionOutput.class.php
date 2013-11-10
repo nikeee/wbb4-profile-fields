@@ -5,7 +5,7 @@ use wcf\data\user\User;
 use wcf\util\StringUtil;
 
 /**
- * User option output implementation for the output of a GitHub.com user profile.
+ * User option output implementation for the output of a StackOverflow user profile.
  * 
  * @author	Niklas Mollenhauer
  * @copyright	2013 Niklas Mollenhauer
@@ -33,6 +33,6 @@ class StackOverflowUserOptionOutput implements IUserOptionOutput {
 		$linkUrl = StringUtil::encodeHTML($linkUrl);
 		$value = StringUtil::encodeHTML($value);
 
-		return '<a href="'.$linkUrl.'" class="externalURL"'.(EXTERNAL_LINK_REL_NOFOLLOW ? ' rel="nofollow"' : '').(EXTERNAL_LINK_TARGET_BLANK ? ' target="_blank"' : '').'><img src="'.$imageUrl.'" alt=" Profil von '.$value.'" /></a>';
+		return '<a href="'.$linkUrl.'" class="externalURL"'.(EXTERNAL_LINK_REL_NOFOLLOW ? ' rel="nofollow"' : '').(EXTERNAL_LINK_TARGET_BLANK ? ' target="_blank"' : '').'><img src="'.$imageUrl.'" alt="'.$value.'" /></a>';
 	}
 }
